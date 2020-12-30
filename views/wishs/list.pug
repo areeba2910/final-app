@@ -5,17 +5,17 @@ block content
         .col-sm-8
             h2 My Playlist
         .col-sm-4
-            a(href="/wishs/add", class="btn btn-success float-right" , id="i") Wish List Add    
+            a(href="/wishs/add", class="btn btn-success float-right" , id="i") add song  
         table.table
             thead
                 tr
                     th song
                     th singer
-                    th add/remove
+                    th remove
             tbody
                 each product in products
                     tr
                         td=product.name
                         td=product.company
                         td
-                            a(href="/wishs/delete/"+product._id, class="btn btn-danger", id="l") Delete
+                            a(href="/wishs/delete/"+product._id, class="btn btn-danger", id="l") remove
