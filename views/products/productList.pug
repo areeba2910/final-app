@@ -4,17 +4,17 @@ extends ../layout
 block content
     .row
         .col-md-6
-            h1 product List
+            h1 check new albums 
         .col-md-6
             a(href="/products/add" class="btn btn-primary float-right") Add Item
         table.table
             thead
                 tr
-                    th  Name
-                    th  Price
-                    th Company
-                    th Location
-                    th More Details
+                    th song
+                    th singer
+                    th released in
+                    th rate it
+                    th comments
             tbody
                 each product in products
                     tr 
@@ -24,6 +24,6 @@ block content
                         td=product.location
                         td=product.detail
                         td  
-                            a(href="/products/delete/"+product._id    class="btn btn-danger") Delete
-                            a(href="/products/edit/"+product._id    class="btn btn-info") Edit
-                            a(href="/products/cart/"+product._id    class="btn btn-info ml-3") Add To Cart
+                            a(href="/products/delete/"+product._id    class="btn btn-danger") play
+                            a(href="/products/edit/"+product._id    class="btn btn-info") download
+                           // a(href="/products/cart/"+product._id    class="btn btn-info ml-3") Add To playlist
