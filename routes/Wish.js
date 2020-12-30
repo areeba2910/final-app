@@ -5,7 +5,7 @@ var checkSessionAuth = require("../middleware/sessionAuth");
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   let products = await Wish.find();
-  res.render("wishs/list", { title: "Branches in Our Brand", products });
+  res.render("wishs/list", { title: "Music Hub", products });
 });
 router.get("/add",checkSessionAuth, async function (req, res, next) {
   res.render("wishs/add");
