@@ -30,7 +30,7 @@ router.post("/login", async function (req, res, next) {
 	});
 	if (!user) return res.redirect("/login");
 	req.session.user = user;
-	return res.redirect("/");
+	return res.redirect("https://html-css-assignment.herokuapp.com/");
 });
 
 //logout
